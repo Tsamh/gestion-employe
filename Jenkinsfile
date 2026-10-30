@@ -1,8 +1,8 @@
 pipeline {
-    // deploiement ci-cd mono-repo
+    // deploiement ci-cd mono-repos
     // agent any
 
-    agent  any  
+    agent any  
        
 //label
     environment {
