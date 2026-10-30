@@ -3,7 +3,7 @@ pipeline {
     // agent any
 
     agent {
-        label 'any'  
+        label any  
        
     }
 
