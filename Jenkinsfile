@@ -3,12 +3,12 @@ pipeline {
     // agent any
 
     agent {
-        label 'agent-windows'  
+        label 'agent-windows-1'  
        
     }
 
     environment {
-        DOCKERHUB_USER = "ditdevops1"
+        DOCKERHUB_USER = "sambaht"
         BACKEND_IMAGE  = "backend-employe"
         FRONTEND_IMAGE = "frontend-employe"
         IMAGE_TAG      = "1.${BUILD_NUMBER}"
@@ -46,6 +46,7 @@ pipeline {
                         docker login -u %DOCKER_USER% -p %DOCKER_PASS%
                         docker push %DOCKERHUB_USER%/%BACKEND_IMAGE%:%IMAGE_TAG%
                         docker push %DOCKERHUB_USER%/%FRONTEND_IMAGE%:%IMAGE_TAG%
+                        docker logout
                     """
                 }
             }
