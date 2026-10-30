@@ -3,7 +3,7 @@ pipeline {
     // agent any
 
     agent {
-        label 'agent-windows-1'  
+        label any  
        
     }
 //label
