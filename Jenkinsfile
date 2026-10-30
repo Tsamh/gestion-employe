@@ -6,7 +6,7 @@ pipeline {
         label 'agent'  
        
     }
-//label
+
     environment {
         DOCKERHUB_USER = "sambaht"
         BACKEND_IMAGE  = "backend-employe"
