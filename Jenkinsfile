@@ -3,10 +3,10 @@ pipeline {
     // agent any
 
     agent {
-        label any  
+        label 'agent-windows-1'  
        
     }
-
+//label
     environment {
         DOCKERHUB_USER = "sambaht"
         BACKEND_IMAGE  = "backend-employe"
