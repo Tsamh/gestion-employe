@@ -6,7 +6,7 @@ pipeline {
         label 'agent-windows-1'  
        
     }
-
+//label
     environment {
         DOCKERHUB_USER = "sambaht"
         BACKEND_IMAGE  = "backend-employe"
@@ -46,7 +46,6 @@ pipeline {
                         docker login -u %DOCKER_USER% -p %DOCKER_PASS%
                         docker push %DOCKERHUB_USER%/%BACKEND_IMAGE%:%IMAGE_TAG%
                         docker push %DOCKERHUB_USER%/%FRONTEND_IMAGE%:%IMAGE_TAG%
-                        docker logout
                     """
                 }
             }
