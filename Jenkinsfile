@@ -1,9 +1,11 @@
 pipeline {
-    // deploiement ci-cd mono-repos
+    // deploiement ci-cd mono-repo
     // agent any
 
-    agent any  
+    agent {
+        label 'agent-windows-1'  
        
+    }
 //label
     environment {
         DOCKERHUB_USER = "sambaht"
